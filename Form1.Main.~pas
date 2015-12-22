@@ -1,0 +1,63 @@
+unit Form1.Main;
+
+interface
+
+uses
+  Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
+  Dialogs, Menus;
+
+type
+  TForm1 = class(TForm)
+    MainMenu1: TMainMenu;
+    Fiile1: TMenuItem;
+    Petugas1: TMenuItem;
+    Dokter1: TMenuItem;
+    Pasien1: TMenuItem;
+    Menu1: TMenuItem;
+    PasienBaru1: TMenuItem;
+    RawatInap1: TMenuItem;
+    ke1: TMenuItem;
+    procedure Petugas1Click(Sender: TObject);
+    procedure Dokter1Click(Sender: TObject);
+    procedure Pasien1Click(Sender: TObject);
+    procedure PasienBaru1Click(Sender: TObject);
+    procedure RawatInap1Click(Sender: TObject);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  Form1: TForm1;
+
+implementation
+
+{$R *.dfm}
+
+procedure TForm1.Petugas1Click(Sender: TObject);
+begin
+ Form2.Show;
+end;
+
+procedure TForm1.Dokter1Click(Sender: TObject);
+begin
+Form3.Show;
+end;
+
+procedure TForm1.Pasien1Click(Sender: TObject);
+begin
+Form4.Show;
+end;
+
+procedure TForm1.PasienBaru1Click(Sender: TObject);
+begin
+Form5.Show;
+end;
+
+procedure TForm1.RawatInap1Click(Sender: TObject);
+begin
+Form6.Show;
+end;
+
+end.

@@ -1,0 +1,172 @@
+object Form4: TForm4
+  Left = 267
+  Top = 396
+  Width = 928
+  Height = 480
+  Caption = 'Form4'
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'MS Sans Serif'
+  Font.Style = []
+  OldCreateOrder = False
+  PixelsPerInch = 96
+  TextHeight = 13
+  object Label1: TLabel
+    Left = 64
+    Top = 96
+    Width = 56
+    Height = 23
+    Caption = 'kd_petugas'
+    FocusControl = DBEdit1
+    Font.Charset = ANSI_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -21
+    Font.Name = 'Niagara Engraved'
+    Font.Style = []
+    ParentFont = False
+  end
+  object Label2: TLabel
+    Left = 56
+    Top = 144
+    Width = 73
+    Height = 23
+    Caption = 'nama_petugas'
+    FocusControl = DBEdit2
+    Font.Charset = ANSI_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -21
+    Font.Name = 'Niagara Engraved'
+    Font.Style = []
+    ParentFont = False
+  end
+  object Label3: TLabel
+    Left = 360
+    Top = 88
+    Width = 78
+    Height = 23
+    Caption = 'alamat_petugas'
+    FocusControl = DBMemo1
+    Font.Charset = ANSI_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -21
+    Font.Name = 'Niagara Engraved'
+    Font.Style = []
+    ParentFont = False
+  end
+  object Label4: TLabel
+    Left = 376
+    Top = 176
+    Width = 44
+    Height = 23
+    Caption = 'jam_jaga'
+    FocusControl = DBEdit3
+    Font.Charset = ANSI_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -21
+    Font.Name = 'Niagara Engraved'
+    Font.Style = []
+    ParentFont = False
+  end
+  object Label5: TLabel
+    Left = 304
+    Top = 16
+    Width = 62
+    Height = 38
+    Caption = 'Petugas'
+    Font.Charset = ANSI_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -35
+    Font.Name = 'Niagara Engraved'
+    Font.Style = []
+    ParentFont = False
+  end
+  object DBEdit1: TDBEdit
+    Left = 144
+    Top = 96
+    Width = 134
+    Height = 21
+    DataField = 'kd_petugas'
+    DataSource = DataSource1
+    TabOrder = 0
+  end
+  object DBEdit2: TDBEdit
+    Left = 136
+    Top = 152
+    Width = 145
+    Height = 21
+    DataField = 'nama_petugas'
+    DataSource = DataSource1
+    TabOrder = 1
+  end
+  object DBMemo1: TDBMemo
+    Left = 472
+    Top = 88
+    Width = 185
+    Height = 49
+    DataField = 'alamat_petugas'
+    DataSource = DataSource1
+    TabOrder = 2
+  end
+  object DBEdit3: TDBEdit
+    Left = 472
+    Top = 176
+    Width = 185
+    Height = 21
+    DataField = 'jam_jaga'
+    DataSource = DataSource1
+    TabOrder = 3
+  end
+  object DBGrid1: TDBGrid
+    Left = 96
+    Top = 248
+    Width = 729
+    Height = 120
+    DataSource = DataSource1
+    TabOrder = 4
+    TitleFont.Charset = DEFAULT_CHARSET
+    TitleFont.Color = clWindowText
+    TitleFont.Height = -11
+    TitleFont.Name = 'MS Sans Serif'
+    TitleFont.Style = []
+  end
+  object DBNavigator1: TDBNavigator
+    Left = 312
+    Top = 392
+    Width = 240
+    Height = 25
+    DataSource = DataSource1
+    TabOrder = 5
+  end
+  object petugas: TTable
+    Active = True
+    DatabaseName = 'DBrumah_sakit'
+    TableName = 'petugas'
+    Left = 8
+    Top = 16
+    object petugaskd_petugas: TIntegerField
+      FieldName = 'kd_petugas'
+      Required = True
+    end
+    object petugasnama_petugas: TStringField
+      FieldName = 'nama_petugas'
+      Required = True
+    end
+    object petugasalamat_petugas: TMemoField
+      FieldName = 'alamat_petugas'
+      Required = True
+      BlobType = ftMemo
+      Size = 1
+    end
+    object petugasjam_jaga: TDateField
+      FieldName = 'jam_jaga'
+      Required = True
+    end
+  end
+  object DataSource1: TDataSource
+    DataSet = petugas
+    Left = 48
+    Top = 16
+  end
+end
